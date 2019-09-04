@@ -41,22 +41,32 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// const navAnchor = document.querySelectorAll("a").style.color = '#b0b0b0';
-// navAnchor[0].setAttribute('src', siteContent["nav"]["nav-item-1"]);
-// navAnchor[1].setAttribute('src', siteContent["nav"]["nav-item-2"]);
-// navAnchor[2].setAttribute('src', siteContent["nav"]["nav-item-3"]);
-// navAnchor[3].setAttribute('src', siteContent["nav"]["nav-item-4"]);
-// navAnchor[4].setAttribute('src', siteContent["nav"]["nav-item-5"]);
-// navAnchor[5].setAttribute('src', siteContent["nav"]["nav-item-6"]);
-// navAnchor.style.color = '#b0b0b0';
-// console.log(navA);
+const navAnchor = document.querySelectorAll("nav a")
+// navAnchor[0].innerText = siteContent ["nav"]["nav-item-1"]
+// navAnchor[1].innerText = siteContent ["nav"]["nav-item-2"]
+// navAnchor[2].innerText = siteContent ["nav"]["nav-item-3"]
+// navAnchor[3].innerText = siteContent ["nav"]["nav-item-4"]
+// navAnchor[4].innerText = siteContent ["nav"]["nav-item-5"]
+// navAnchor[5].innerText = siteContent ["nav"]["nav-item-6"]
+
+navAnchor.forEach ((navA, i) => {
+  navAnchor[i].innerText = siteContent ["nav"][`nav-item-${i+1}`]
+})
 
 const headerImg = document.getElementById("cta-img");
 headerImg.setAttribute('src', siteContent["cta"]["img-src"])
 
-const topText = document.querySelectorAll("h1");
-topText = siteContent["cta"]["h1"] 
-// console.log (topText);
+const topText = document.querySelector(".cta .cta-text h1");
+topText.innerText = siteContent["cta"]["h1"];
+// topText.style.width = "20px";
+console.log (topText);
+
+const btnText = document.querySelector(".cta .cta-text button");
+btnText.innerText = siteContent["cta"]["button"];
+
+const midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
 
 
 const textHeading = document.querySelectorAll('h4');
@@ -65,3 +75,10 @@ textHeading[1].textContent = siteContent['main-content']['about-h4'];
 textHeading[2].textContent = siteContent['main-content']['services-h4'];
 textHeading[3].textContent = siteContent['main-content']['product-h4'];
 textHeading[4].textContent = siteContent['main-content']['vision-h4'];
+
+const midContent = document.querySelectorAll('p');
+midContent[0].textContent = siteContent["main-content"]["features-content"];
+midContent[1].textContent = siteContent['main-content']['about-content'];
+midContent[2].textContent = siteContent['main-content']['services-content'];
+midContent[3].textContent = siteContent['main-content']['product-content'];
+midContent[4].textContent = siteContent['main-content']['vision-content'];
