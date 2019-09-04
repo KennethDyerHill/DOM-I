@@ -41,9 +41,22 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const navA = document.querySelectorAll('a');
-navA.setAttributes('src', siteContent["nav"]["nav-item-1"])
+// const navAnchor = document.querySelectorAll("a").style.color = '#b0b0b0';
+// navAnchor[0].setAttribute('src', siteContent["nav"]["nav-item-1"]);
+// navAnchor[1].setAttribute('src', siteContent["nav"]["nav-item-2"]);
+// navAnchor[2].setAttribute('src', siteContent["nav"]["nav-item-3"]);
+// navAnchor[3].setAttribute('src', siteContent["nav"]["nav-item-4"]);
+// navAnchor[4].setAttribute('src', siteContent["nav"]["nav-item-5"]);
+// navAnchor[5].setAttribute('src', siteContent["nav"]["nav-item-6"]);
+// navAnchor.style.color = '#b0b0b0';
+// console.log(navA);
 
+const headerImg = document.getElementById("cta-img");
+headerImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+const topText = document.querySelectorAll("h1");
+topText = siteContent["cta"]["h1"] 
+// console.log (topText);
 
 
 const textHeading = document.querySelectorAll('h4');
