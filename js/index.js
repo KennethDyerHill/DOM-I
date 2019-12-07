@@ -82,3 +82,4 @@ midContent[1].textContent = siteContent['main-content']['about-content'];
 midContent[2].textContent = siteContent['main-content']['services-content'];
 midContent[3].textContent = siteContent['main-content']['product-content'];
 midContent[4].textContent = siteContent['main-content']['vision-content'];
+
